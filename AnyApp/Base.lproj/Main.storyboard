@@ -5,10 +5,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller - General-->
+        <!--General View Controller - General-->
         <scene sceneID="zDJ-H8-e6K">
             <objects>
-                <viewController title="General" id="K7f-e2-4r0" sceneMemberID="viewController">
+                <viewController title="General" id="K7f-e2-4r0" customClass="GeneralViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SOg-8v-2bE"/>
                         <viewControllerLayoutGuide type="bottom" id="Rbo-oH-Hsp"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="62" y="-593"/>
         </scene>
-        <!--View Controller - About-->
+        <!--About View Controller - About-->
         <scene sceneID="734-MH-2Yk">
             <objects>
-                <viewController title="About" id="tJT-15-Qs7" sceneMemberID="viewController">
+                <viewController title="About" id="tJT-15-Qs7" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZT3-kC-7gd"/>
                         <viewControllerLayoutGuide type="bottom" id="LZ4-XW-IHa"/>
@@ -79,6 +79,9 @@
                                 <state key="normal" title="Show Textfield">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ShowTextField:" destination="tJT-15-Qs7" eventType="touchUpInside" id="QxJ-Qd-R4a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-Bn-YZJ">
                                 <rect key="frame" x="123" y="304" width="75" height="30"/>
@@ -95,6 +98,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TextFieldAccept:" destination="tJT-15-Qs7" eventType="editingDidEnd" id="vYp-tQ-M21"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -105,15 +111,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" id="NBA-Va-3Ay"/>
+                    <connections>
+                        <outlet property="tfInput" destination="Olq-ko-rBq" id="vcq-lg-SJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZy-xC-I9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="596" y="-267"/>
         </scene>
-        <!--View Controller-->
+        <!--Easter Egg View Controller-->
         <scene sceneID="pIo-te-YQH">
             <objects>
-                <viewController id="HjA-Aq-jIT" sceneMemberID="viewController">
+                <viewController id="HjA-Aq-jIT" customClass="EasterEggViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jRc-0e-pFq"/>
                         <viewControllerLayoutGuide type="bottom" id="UaN-Kj-T9d"/>
@@ -122,12 +131,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWI-tP-72v">
-                                <rect key="frame" x="137" y="480" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWI-tP-72v">
+                                <rect key="frame" x="82" y="394" width="157" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CloseEasterEgg:" destination="HjA-Aq-jIT" eventType="touchUpInside" id="Z2m-rS-0fL"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Spanish_inquisition.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-Vl-e3f">
                                 <rect key="frame" x="40" y="220" width="240" height="128"/>
@@ -137,6 +149,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="zWI-tP-72v" secondAttribute="centerY" constant="-211" id="89o-0q-ps5"/>
+                            <constraint firstAttribute="centerY" secondItem="zWI-tP-72v" secondAttribute="centerY" constant="-211" id="Um9-9b-l2h"/>
                             <constraint firstItem="zWI-tP-72v" firstAttribute="width" secondItem="FCP-Bk-ozN" secondAttribute="height" multiplier="23:284" id="smb-uM-FMN"/>
                         </constraints>
                     </view>
@@ -145,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="962" y="-280"/>
         </scene>
-        <!--View Controller - Details-->
+        <!--Details View Controller - Details-->
         <scene sceneID="g4E-N6-Igt">
             <objects>
-                <viewController title="Details" id="S18-ZR-5Wh" sceneMemberID="viewController">
+                <viewController title="Details" id="S18-ZR-5Wh" customClass="DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Br4-yl-wdd"/>
                         <viewControllerLayoutGuide type="bottom" id="WJv-iK-2AQ"/>
@@ -165,29 +178,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oL-Hm-KYC">
-                                <rect key="frame" x="137" y="403" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oL-Hm-KYC">
+                                <rect key="frame" x="107" y="404" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="More Details">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YB2-am-Ki0" kind="push" id="1M6-XQ-HrW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="9oL-Hm-KYC" secondAttribute="centerY" constant="-135" id="PtC-hb-6ty"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dRz-S4-tkg"/>
-                    <connections>
-                        <segue destination="YB2-am-Ki0" kind="push" id="8oh-Gk-LdM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ud8-hh-nGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="413"/>
         </scene>
-        <!--View Controller-->
+        <!--More Details View Controller-->
         <scene sceneID="q3K-1j-rSr">
             <objects>
-                <viewController id="YB2-am-Ki0" sceneMemberID="viewController">
+                <viewController id="YB2-am-Ki0" customClass="MoreDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cdl-4r-aH3"/>
                         <viewControllerLayoutGuide type="bottom" id="JXp-0n-r2O"/>
@@ -195,7 +211,20 @@
                     <view key="view" contentMode="scaleToFill" id="ETS-we-EZV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCU-ZK-th9">
+                                <rect key="frame" x="22" y="103" width="276" height="346"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">MORE DETAILS - Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pCU-ZK-th9" secondAttribute="centerY" constant="8" id="tCd-Bj-lpe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zFz-kU-bbr"/>
                 </viewController>

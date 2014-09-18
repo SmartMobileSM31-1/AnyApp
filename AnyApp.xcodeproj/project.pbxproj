@@ -22,6 +22,11 @@
 		F503B95519C18C24003BD16A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F503B95319C18C24003BD16A /* InfoPlist.strings */; };
 		F503B95719C18C24003BD16A /* AnyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B95619C18C24003BD16A /* AnyAppTests.m */; };
 		F503B96319C19473003BD16A /* Spanish_inquisition.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F503B96219C19473003BD16A /* Spanish_inquisition.jpg */; };
+		F503B96619C19BD5003BD16A /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B96519C19BD5003BD16A /* GeneralViewController.m */; };
+		F503B96919C19BE4003BD16A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B96819C19BE4003BD16A /* AboutViewController.m */; };
+		F503B96C19C19BF2003BD16A /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B96B19C19BF2003BD16A /* DetailsViewController.m */; };
+		F503B96F19C19C01003BD16A /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B96E19C19C01003BD16A /* EasterEggViewController.m */; };
+		F503B97219C19C10003BD16A /* MoreDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F503B97119C19C10003BD16A /* MoreDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,16 @@
 		F503B95619C18C24003BD16A /* AnyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyAppTests.m; sourceTree = "<group>"; };
 		F503B96119C19422003BD16A /* Spanish_Inquisition */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spanish_Inquisition; sourceTree = "<group>"; };
 		F503B96219C19473003BD16A /* Spanish_inquisition.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Spanish_inquisition.jpg; sourceTree = "<group>"; };
+		F503B96419C19BD5003BD16A /* GeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralViewController.h; sourceTree = "<group>"; };
+		F503B96519C19BD5003BD16A /* GeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
+		F503B96719C19BE4003BD16A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		F503B96819C19BE4003BD16A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		F503B96A19C19BF2003BD16A /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F503B96B19C19BF2003BD16A /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		F503B96D19C19C01003BD16A /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		F503B96E19C19C01003BD16A /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
+		F503B97019C19C10003BD16A /* MoreDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDetailsViewController.h; sourceTree = "<group>"; };
+		F503B97119C19C10003BD16A /* MoreDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,16 @@
 				F503B93A19C18C23003BD16A /* AppDelegate.h */,
 				F503B93B19C18C23003BD16A /* AppDelegate.m */,
 				F503B93D19C18C23003BD16A /* Main.storyboard */,
+				F503B96419C19BD5003BD16A /* GeneralViewController.h */,
+				F503B96519C19BD5003BD16A /* GeneralViewController.m */,
+				F503B96719C19BE4003BD16A /* AboutViewController.h */,
+				F503B96819C19BE4003BD16A /* AboutViewController.m */,
+				F503B96A19C19BF2003BD16A /* DetailsViewController.h */,
+				F503B96B19C19BF2003BD16A /* DetailsViewController.m */,
+				F503B96D19C19C01003BD16A /* EasterEggViewController.h */,
+				F503B96E19C19C01003BD16A /* EasterEggViewController.m */,
+				F503B97019C19C10003BD16A /* MoreDetailsViewController.h */,
+				F503B97119C19C10003BD16A /* MoreDetailsViewController.m */,
 				F503B94019C18C23003BD16A /* ViewController.h */,
 				F503B94119C18C23003BD16A /* ViewController.m */,
 				F503B94319C18C23003BD16A /* Images.xcassets */,
@@ -264,8 +289,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F503B94219C18C23003BD16A /* ViewController.m in Sources */,
+				F503B96919C19BE4003BD16A /* AboutViewController.m in Sources */,
 				F503B93C19C18C23003BD16A /* AppDelegate.m in Sources */,
+				F503B96C19C19BF2003BD16A /* DetailsViewController.m in Sources */,
 				F503B93819C18C23003BD16A /* main.m in Sources */,
+				F503B96619C19BD5003BD16A /* GeneralViewController.m in Sources */,
+				F503B97219C19C10003BD16A /* MoreDetailsViewController.m in Sources */,
+				F503B96F19C19C01003BD16A /* EasterEggViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
